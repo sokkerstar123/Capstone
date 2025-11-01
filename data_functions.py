@@ -1,4 +1,4 @@
-from datasets import load_dataset
+from datasets import load_dataset, Dataset, DatasetDict
 import json
 import os
 from tqdm import tqdm
@@ -11,6 +11,9 @@ from nltk.tokenize import word_tokenize
 import nltk
 import re
 import string
+from sentence_transformers import SentenceTransformer
+import numpy as np
+import torch
 tqdm.pandas()
 
 
@@ -189,6 +192,7 @@ def load_data(
 
     # generate the summary of the transcript
     pipe = pipeline("summarization", model="facebook/bart-large-cnn")
+
     df_agg['summary'] = df_agg['full_transcript'].progress_apply(lambda x: getSummary(x, pipe=pipe, first_n_sent = summarize_first_n_sents))
 
     # tokenize the transcript
@@ -197,6 +201,30 @@ def load_data(
     # tokenize the transcript summary
     df_agg['summary_tokens'] = df_agg['summary'].apply(lambda x: tokenize(x))
 
+    # build transcript vocab using training data
+    transVocab = buildVocab(df_agg.transcript_tokens, min_freq=0)
+
+    # build summary vocab using training data
+    summVocab = buildVocab(df_agg.summary_tokens, min_freq=0)
+
+    # get transcript embeddings
+    df_agg['transcript_embedding'] = df_agg['transcript_tokens'].apply(lambda x: getEmbeddings(' '.join(x)))
+
+    # get summary embeddings
+    df_agg['summary_embedding'] = df_agg['summary_tokens'].apply(lambda x: getEmbeddings(' '.join(x)))
+
+    df_agg = Dataset.from_pandas(df_agg)
+
+    # convert embeddings to torch type
+    dtype = 'torch'
+    cols_to_conv = ['transcript_embedding','summary_embedding']
+
+    df_agg = df_agg.with_format(
+                                type=dtype
+                                ,columns=cols_to_conv
+                                ,output_all_columns=True
+                            )
+    
     return df_agg
 
 
@@ -224,19 +252,94 @@ def buildVocab(
     return vocab
 
 
+def getIndices(
+                x
+                ,vocab
+            ):
+    
+    '''
+    returns indices of the input tokens in the vocabulary
 
+    x: list of tokens
+    '''
+
+    idxs = vocab.lookup_indices(x)
+
+    return idxs 
+
+
+def getEmbeddings(x):
+    '''
+    This function returns embeddings.
+
+    x: string (e.g. summary or transcript)
+
+    '''
+
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    embeddings = model.encode(x)
+
+    return embeddings
+
+
+
+def get_collate_fn():
+    '''
+    This function combines observations into a batch.
+    '''
+    def collate_fn(batch):
+        transcripts = torch.stack([obs["transcript_embedding"] for obs in batch])
+        summaries = torch.stack([obs["transcript_embedding"] for obs in batch])
+        batch = {
+            "transcript": transcripts,
+            "summary": summaries,
+        }
+        return batch
+
+    return collate_fn
+
+
+'''
+Function below created by Ben Trevett. Returns a Pytorch DataLoader
+
+https://github.com/bentrevett/pytorch-seq2seq
+
+'''
+def get_data_loader(dataset
+                    , batch_size
+                    , shuffle=False):
+
+    collate_fn = get_collate_fn()
+    data_loader = torch.utils.data.DataLoader(
+                            dataset=dataset,
+                            batch_size=batch_size,
+                            collate_fn=collate_fn,
+                            shuffle=shuffle,
+                        )
+    
+    return data_loader
 
 
 df = load_data(n_rows=10, summarize_first_n_sents=25)
-df.head(10)
-df['summary_tokens'][0]
-df['summary'][0]
 
-summVocab = buildVocab( df.summary_tokens, min_freq=0)
+batch_size = 6
+train_data_loader = get_data_loader(df, batch_size, shuffle=True)
 
-summVocab.get_itos()[:20]
-summVocab(["will", "you", "download", "the", "new", "game", "?"])
-summVocab.lookup_tokens(summVocab.lookup_indices(["will", "you", "download", "the", "new", "game", "?"]))
+
+# for i, batch in enumerate(train_data_loader):
+#     src = batch['transcript']
+#     print((len(batch) , src.shape))
+
+
+# df[0]['transcript_embedding']
+# type(df)
+# df.shape
+# getEmbeddings(' '.join(df['summary_tokens'][0])).shape
+# summVocab = buildVocab(df.summary_tokens, min_freq=0)
+# summVocab.get_itos()[:20]
+# summVocab(["will", "you", "download", "the", "new", "game", "?"])
+# summVocab.lookup_tokens(summVocab.lookup_indices(["will", "you", "download", "the", "new", "game", "?"]))
 
 
 
