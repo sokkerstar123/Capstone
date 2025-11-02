@@ -353,36 +353,13 @@ train_data_loader = get_data_loader(df, batch_size, shuffle=True)
 
 # [idx for idx ,c in enumerate(df['video_id']) if c == 'hODZtpSCZZ0']
 # [idx for idx ,c in enumerate(df['video_id']) if c == 'sh-MQboWJug']
-# df['video_id'][19]
-# df['summary_embedding'][10].shape
-# sh-MQboWJug
-# df['summary'][9]
-
 
 # for i, batch in enumerate(train_data_loader):
 #     src = batch['transcript']
 #     print((len(batch) , src.shape))
 
-
-# df[0]['transcript_embedding']
-# type(df)
-# df.shape
-# getEmbeddings(' '.join(df['summary_tokens'][0]))
-
-# len(df['summary_tokens'][0])
-
-# [c for c in getVocab() if 'computer' in c]
-
 # tokenizer, vocab = getVocab()
-# tokenizer('hello gerth. hello matthew.')
+# tokenizer('hello how are you?')
 # '[SEP]' in vocab
 # tokenizer.convert_ids_to_tokens([101, 7592, 16216, 15265, 1012, 7592, 5487, 1012, 102])
-# help(tokenizer)
-# len(vocab)
-# tokenizer
-# summVocab = buildVocab(df.summary_tokens, min_freq=0)
-# summVocab.get_itos()[:20]
-# summVocab(["will", "you", "download", "the", "new", "game", "?"])
-# summVocab.lookup_tokens(summVocab.lookup_indices(["will", "you", "download", "the", "new", "game", "?"]))
-
 
