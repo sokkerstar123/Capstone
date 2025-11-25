@@ -42,5 +42,5 @@ The development process followed a four-stage pipeline:
 
 We evaluated the model using both lexical and semantic metrics:
 
-* **Lexical Overlap (ROUGE):** The model achieved ROUGE-1 scores averaging 0.18. This relatively low score is attributed to the vocabulary divergence between the teacher (Gemini) and student (Flan-T5) models.
+* **Lexical Overlap (ROUGE):** The model achieved ROUGE-1 scores averaging 0.20. This relatively low score is attributed to the vocabulary divergence between the teacher (Gemini) and student (Flan-T5) models.
 * **Semantic Similarity:** Analysis using Cosine Similarity on vector embeddings reveals scores between 0.60 and 0.80. This significant metric demonstrates that the model successfully captures the semantic meaning and narrative structure of the videos, despite using different phrasing than the ground truth.
