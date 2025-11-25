@@ -1,0 +1,13 @@
+transformers
+torch
+youtube-transcript-api
+sentencepiece
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+rouge-score
+sentence-transformers
+datasets
+accelerate
