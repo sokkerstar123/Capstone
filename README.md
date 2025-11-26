@@ -18,6 +18,7 @@ The project directory is organized as follows:
 
 * **src/**: Contains the production-ready source code for the inference engine and the `VideoSummarizer` class.
 * **notebooks/**: Includes Jupyter notebooks documenting the experimental process, including data ETL, RAG prototyping, evaluation and model training workflows.
+* **app/**: Lists all files for api calls and the application.
 * **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
 * **requirements.txt**: Lists all Python dependencies required to reproduce the environment.
