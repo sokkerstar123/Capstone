@@ -77,7 +77,7 @@ from src.video_summarizer import VideoSummarizer
 summarizer = VideoSummarizer(model_path="./final_flan_t5_model")
 
 # Run inference
-url = "[https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=VIDEO_ID)"
+url = "https://www.youtube.com/watch?v=VIDEO_ID"   # Remember to replace `VIDEO_ID`
 summary = summarizer.generate_summary(url)
 print(summary)
 ```
