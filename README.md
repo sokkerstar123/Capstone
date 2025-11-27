@@ -44,7 +44,11 @@ The development process followed a four-stage pipeline:
 
 ## Performance Evaluation
 ### Human Evaluation (TBA)
+To compare how well the four models could summarize, our team randomly sampled 30 YouTube videos to watch. The 30 videos are in the same domain, technical tutorials, and are from the same youtube-transcriptions dataset. Then for each of the thirty videos we wrote a summary of the video. From there we scored the four summaries for each video on informativeness, quality, and relevance. The scores were on a scale of 1 (poor) to 5 (excellent) and their definitions are below.
 
+1. Informativeness: How much important information does the summary convey?
+2. Quality: Is the summary clear, well-written, and complete overall?
+3. Relevance: Does the summary capture the key points of the video?
 
 ### Quantitative Evaluation (ROUGE Metrics) 
 We evaluated the model using both lexical and semantic metrics:
