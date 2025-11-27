@@ -56,7 +56,7 @@ We evaluated the model using both lexical and semantic metrics:
 Clone the repository and install the necessary dependencies listed in `requirements.txt`.
 
 ```
-git clone [https://github.com/sokkerstar123/Capstone.git](https://github.com/sokkerstar123/Capstone.git)
+git clone https://github.com/sokkerstar123/Capstone.git
 cd youtube-summarizer-capstone
 pip install -r requirements.txt
 ```
