@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 ### 2. Model Weight Configuration
 Due to GitHub's file size limitations, the fine-tuned model weights are hosted externally.
-* **Action Required:** Download the model package from [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link].
+* **Action Required:** Download the model package from [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link](https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link).
 * **Setup:** Unzip the downloaded file and ensure the directory `final_flan_t5_model` is placed in the root of this project repository.
 
 ### 3. Generating Summaries (Inference)
@@ -106,7 +106,7 @@ To facilitate knowledge distillation, we generated a synthetic dataset containin
 
 ### 3. Model Weights
 The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due to file size limitations.
-* **Access:** [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link]
+* **Access:** [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link](https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link)
 * **License:** The model is a derivative of `google/flan-t5-base` (Apache 2.0 License).
 
 ## License and Attribution
