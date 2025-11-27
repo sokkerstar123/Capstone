@@ -46,6 +46,46 @@ We evaluated the model using both lexical and semantic metrics:
 * **Lexical Overlap (ROUGE):** The model achieved ROUGE-1 scores averaging 0.20. This relatively low score is attributed to the vocabulary divergence between the teacher (Gemini) and student (Flan-T5) models.
 * **Semantic Similarity:** Analysis using Cosine Similarity on vector embeddings reveals scores between 0.60 and 0.80. This significant metric demonstrates that the model successfully captures the semantic meaning and narrative structure of the videos, despite using different phrasing than the ground truth.
 
+## Execution Instructions
+
+### Prerequisites
+* Python 3.8 or higher
+* GPU support is recommended for efficient model inference (e.g., NVIDIA CUDA).
+
+### 1. Installation
+Clone the repository and install the necessary dependencies listed in `requirements.txt`.
+
+```bash
+git clone [https://github.com/sokkerstar123/Capstone.git](https://github.com/sokkerstar123/Capstone.git)
+cd youtube-summarizer-capstone
+pip install -r requirements.txt
+
+### 2. Model Weight Configuration
+Due to GitHub's file size limitations, the fine-tuned model weights are hosted externally.
+* **Action Required:** Download the model package from [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link].
+* **Setup:** Unzip the downloaded file and ensure the directory `final_flan_t5_model` is placed in the root of this project repository.
+
+### 3. Generating Summaries (Inference)
+To run the summarizer on a new video, you can use the provided script in the `src` directory or write a simple Python script as follows:
+
+```python
+from src.video_summarizer import VideoSummarizer
+
+# Initialize the model
+# Ensure 'final_flan_t5_model' exists in your current directory
+summarizer = VideoSummarizer(model_path="./final_flan_t5_model")
+
+# Run inference
+url = "[https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=VIDEO_ID)"
+summary = summarizer.generate_summary(url)
+print(summary)
+
+### 4. Reproducing Results and Figures
+To reproduce the figures and evaluation metrics found in the final report:
+1. Navigate to the `notebooks/` directory.
+2. Open `final_analysis_and_plots.ipynb` using Jupyter Notebook or Google Colab. （TBA）
+3. Execute the cells sequentially. Note that the training dataset (`gold_dataset_merged_final.csv`) must be present in the correct path as defined in the notebook. （TBA）
+
 ## Data Access Statement
 
 ### 1. Source Data
@@ -65,3 +105,11 @@ To facilitate knowledge distillation, we generated a synthetic dataset containin
 The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due to file size limitations.
 * **Access:** [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link]
 * **License:** The model is a derivative of `google/flan-t5-base` (Apache 2.0 License).
+
+## License and Attribution
+
+* **Code Attribution:** Certain segments of the RAG retrieval logic and text preprocessing were adapted from open-source documentation (e.g., Hugging Face Tutorials, YouTube Transcript API docs). These segments are explicitly marked with in-line attributions within the source code files.
+* **License:** This project is licensed under the MIT License.
+
+---
+*This project was submitted in partial fulfillment of the requirements for the Master of Applied Data Science (MADS) program.*
