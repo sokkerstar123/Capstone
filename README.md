@@ -18,6 +18,7 @@ The project directory is organized as follows:
 
 * **src/**: Contains the production-ready source code for the inference engine and the `VideoSummarizer` class.
 * **notebooks/**: Includes Jupyter notebooks documenting the experimental process, including data ETL, RAG prototyping, evaluation and model training workflows.
+* **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included.
 * **app/**: Lists all files for api calls and the application.
 * **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
@@ -86,7 +87,7 @@ print(summary)
 To reproduce the figures and evaluation metrics found in the final report:
 1. Navigate to the `notebooks/` directory.
 2. Open `final_analysis_and_plots.ipynb` using Jupyter Notebook or Google Colab. （TBA）
-3. Execute the cells sequentially. Note that the training dataset (`gold_dataset_merged_final.csv`) must be present in the correct path as defined in the notebook. （TBA）
+3. Execute the cells sequentially. Note that the training dataset (`gold_dataset_merged_final.csv`) must be present in the correct path as defined in the notebook.
 
 
 ## Data Access Statement
@@ -101,7 +102,7 @@ This project utilizes the **YouTube Transcriptions** dataset hosted on Hugging F
 ### 2. Derived Data (Synthetic Training Set)
 To facilitate knowledge distillation, we generated a synthetic dataset containing "Gold Standard" summaries.
 * **Method:** Generated using Google's Gemini 2.0 Pro API based on the source transcripts.
-* **Availability:** The derived dataset (`gold_dataset_merged_final.csv`) is included in this repository for reproducibility.
+* **Availability:** The derived dataset (`gold_dataset_merged_final.csv`) is included in this repository for reproducibility: [https://github.com/sokkerstar123/Capstone/blob/main/data/gold_dataset_merged_final.csv](https://github.com/sokkerstar123/Capstone/blob/main/data/gold_dataset_merged_final.csv).
 * **Terms of Use:** This derived data is intended solely for academic research and verifying the results of this project.
 
 ### 3. Model Weights
