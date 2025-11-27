@@ -55,9 +55,11 @@ We evaluated the model using both lexical and semantic metrics:
 ### 1. Installation
 Clone the repository and install the necessary dependencies listed in `requirements.txt`.
 
+```
 git clone [https://github.com/sokkerstar123/Capstone.git](https://github.com/sokkerstar123/Capstone.git)
 cd youtube-summarizer-capstone
 pip install -r requirements.txt
+```
 
 ### 2. Model Weight Configuration
 Due to GitHub's file size limitations, the fine-tuned model weights are hosted externally.
@@ -67,12 +69,13 @@ Due to GitHub's file size limitations, the fine-tuned model weights are hosted e
 ### 3. Generating Summaries (Inference)
 To run the summarizer on a new video, you can use the provided script in the `src` directory or write a simple Python script as follows:
 
-```python
+```
 from src.video_summarizer import VideoSummarizer
 
 # Initialize the model
 # Ensure 'final_flan_t5_model' exists in your current directory
 summarizer = VideoSummarizer(model_path="./final_flan_t5_model")
+```
 
 # Run inference
 url = "[https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=VIDEO_ID)"
