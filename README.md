@@ -8,10 +8,6 @@ The system integrates principles from **Retrieval-Augmented Generation (RAG)** f
 
 ## App
 
-
-## Human Evaluation
-
-
 ## Technical Objectives
 
 1.  **Abstractive Summarization:** Move beyond extractive methods to generate coherent, synthesized paragraphs that capture the core narrative.
@@ -47,7 +43,10 @@ The development process followed a four-stage pipeline:
     Fine-tuning of the `google/flan-t5-base` model using the generated dataset. Training employed mixed-precision (FP16) and optimized hyperparameters to ensure convergence within limited GPU resources.
 
 ## Performance Evaluation
+### Human Evaluation (TBA)
 
+
+### Quantitative Evaluation (ROUGE Metrics) 
 We evaluated the model using both lexical and semantic metrics:
 
 * **Lexical Overlap (ROUGE):** The model achieved ROUGE-1 scores averaging 0.20. This relatively low score is attributed to the vocabulary divergence between the teacher (Gemini) and student (Flan-T5) models.
