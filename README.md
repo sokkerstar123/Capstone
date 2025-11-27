@@ -6,6 +6,12 @@ This repository hosts the implementation of a scalable AI system designed to gen
 
 The system integrates principles from **Retrieval-Augmented Generation (RAG)** for context management and demonstrates a viable pipeline for democratizing video intelligence with low inference costs.
 
+## App
+
+
+## Human Evaluation
+
+
 ## Technical Objectives
 
 1.  **Abstractive Summarization:** Move beyond extractive methods to generate coherent, synthesized paragraphs that capture the core narrative.
