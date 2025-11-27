@@ -57,7 +57,7 @@ Clone the repository and install the necessary dependencies listed in `requireme
 
 ```
 git clone https://github.com/sokkerstar123/Capstone.git
-cd youtube-summarizer-capstone
+cd Capstone
 pip install -r requirements.txt
 ```
 
