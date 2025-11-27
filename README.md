@@ -75,12 +75,12 @@ from src.video_summarizer import VideoSummarizer
 # Initialize the model
 # Ensure 'final_flan_t5_model' exists in your current directory
 summarizer = VideoSummarizer(model_path="./final_flan_t5_model")
-```
 
 # Run inference
 url = "[https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=VIDEO_ID)"
 summary = summarizer.generate_summary(url)
 print(summary)
+```
 
 ### 4. Reproducing Results and Figures
 To reproduce the figures and evaluation metrics found in the final report:
