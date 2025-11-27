@@ -45,3 +45,23 @@ We evaluated the model using both lexical and semantic metrics:
 
 * **Lexical Overlap (ROUGE):** The model achieved ROUGE-1 scores averaging 0.20. This relatively low score is attributed to the vocabulary divergence between the teacher (Gemini) and student (Flan-T5) models.
 * **Semantic Similarity:** Analysis using Cosine Similarity on vector embeddings reveals scores between 0.60 and 0.80. This significant metric demonstrates that the model successfully captures the semantic meaning and narrative structure of the videos, despite using different phrasing than the ground truth.
+
+## Data Access Statement
+
+### 1. Source Data
+This project utilizes the **YouTube Transcriptions** dataset hosted on Hugging Face.
+* **Dataset Name:** `jamescalam/youtube-transcriptions`
+* **Access:** Publicly available via the Hugging Face Datasets library.
+* **URL:** https://huggingface.co/datasets/jamescalam/youtube-transcriptions
+* **Ownership & License:** Data ownership resides with the original content creators on YouTube. This dataset is provided for research/educational purposes under the terms specified by the repository maintainer.
+
+### 2. Derived Data (Synthetic Training Set)
+To facilitate knowledge distillation, we generated a synthetic dataset containing "Gold Standard" summaries.
+* **Method:** Generated using Google's Gemini 2.0 Pro API based on the source transcripts.
+* **Availability:** The derived dataset (`gold_dataset_merged_final.csv`) is included in this repository for reproducibility.
+* **Terms of Use:** This derived data is intended solely for academic research and verifying the results of this project.
+
+### 3. Model Weights
+The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due to file size limitations.
+* **Access:** [https://drive.google.com/file/d/1Cz60JtJpdVMrFds9RI6-9LgIqQ44rIJo/view?usp=drive_link]
+* **License:** The model is a derivative of `google/flan-t5-base` (Apache 2.0 License).
