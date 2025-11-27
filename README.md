@@ -55,7 +55,6 @@ We evaluated the model using both lexical and semantic metrics:
 ### 1. Installation
 Clone the repository and install the necessary dependencies listed in `requirements.txt`.
 
-```bash
 git clone [https://github.com/sokkerstar123/Capstone.git](https://github.com/sokkerstar123/Capstone.git)
 cd youtube-summarizer-capstone
 pip install -r requirements.txt
@@ -85,6 +84,7 @@ To reproduce the figures and evaluation metrics found in the final report:
 1. Navigate to the `notebooks/` directory.
 2. Open `final_analysis_and_plots.ipynb` using Jupyter Notebook or Google Colab. （TBA）
 3. Execute the cells sequentially. Note that the training dataset (`gold_dataset_merged_final.csv`) must be present in the correct path as defined in the notebook. （TBA）
+
 
 ## Data Access Statement
 
