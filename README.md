@@ -125,8 +125,13 @@ The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due t
 
 ## License and Attribution
 
-* **Code Attribution:** Certain segments of the RAG retrieval logic and text preprocessing were adapted from open-source documentation (e.g., Hugging Face Tutorials, YouTube Transcript API docs). These segments are explicitly marked with in-line attributions within the source code files.
-* **License:** This project is licensed under the MIT License.
+### Attribution
+* **Open Source Code:** Certain segments of the RAG retrieval logic and text preprocessing were adapted from open-source documentation (e.g., Hugging Face Tutorials, YouTube Transcript API docs). These segments are explicitly marked with in-line attributions within the source code files.
+* **AI Assistance:** Generative AI tools (e.g., ChatGPT, Gemini) were utilized during the development process for code debugging, refactoring, and generating documentation strings (docstrings). All AI-generated code was reviewed and verified by the human authors.
+* **Synthetic Data:** The "Gold Standard" summaries used for training were synthetically generated using the **Google Gemini API**.
+
+### License
+This project is licensed under the **MIT License**.
 
 ---
 *This project was submitted in partial fulfillment of the requirements for the Master of Applied Data Science (MADS) program.*
