@@ -7,6 +7,7 @@ This repository hosts the implementation of a scalable AI system designed to gen
 The system integrates principles from **Retrieval-Augmented Generation (RAG)** for context management and demonstrates a viable pipeline for democratizing video intelligence with low inference costs.
 
 ## App
+(TBA)
 
 ## Technical Objectives
 
@@ -127,7 +128,7 @@ The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due t
 
 ### Attribution
 * **Open Source Code:** Certain segments of the RAG retrieval logic and text preprocessing were adapted from open-source documentation (e.g., Hugging Face Tutorials, YouTube Transcript API docs). These segments are explicitly marked with in-line attributions within the source code files.
-* **AI Assistance:** Generative AI tools (e.g., ChatGPT, Gemini) were utilized during the development process for code debugging, refactoring, and generating documentation strings (docstrings). All AI-generated code was reviewed and verified by the human authors.
+* **AI Assistance:** Generative AI tools (e.g., ChatGPT, Gemini) were utilized during the development process for studying, code debugging, refactoring, and generating documentation strings (docstrings). All AI-generated code was reviewed and verified by the human authors.
 * **Synthetic Data:** The "Gold Standard" summaries used for training were synthetically generated using the **Google Gemini API**.
 
 ### License
