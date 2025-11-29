@@ -8,10 +8,12 @@ The system integrates principles from **Retrieval-Augmented Generation (RAG)** f
 
 ## Demonstration
 
-### APP (TBA)
+### 1. APP (TBA)
+...
+...
+...
 
-
-### Interactive Model Demo
+### 2. Interactive Model Demo
 
 In addition to the app application, we deployed a dedicated web-based demonstration on Hugging Face Spaces. This standalone interface allows users to interact directly with our fine-tuned Flan-T5 model, inputting YouTube URLs to generate abstractive summaries in real-time. This demo proves the model's capability to perform efficient inference on standard CPU environments, independent of external paid APIs.
 [https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone)
