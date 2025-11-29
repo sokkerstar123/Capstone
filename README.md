@@ -6,8 +6,15 @@ This repository hosts the implementation of a scalable AI system designed to gen
 
 The system integrates principles from **Retrieval-Augmented Generation (RAG)** for context management and demonstrates a viable pipeline for democratizing video intelligence with low inference costs.
 
-## App
-(TBA)
+## Demonstration
+
+### APP (TBA)
+
+
+### Interactive Model Demo
+
+In addition to the app application, we deployed a dedicated web-based demonstration on Hugging Face Spaces. This standalone interface allows users to interact directly with our fine-tuned Flan-T5 model, inputting YouTube URLs to generate abstractive summaries in real-time. This demo proves the model's capability to perform efficient inference on standard CPU environments, independent of external paid APIs.
+[https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone)
 
 ## Technical Objectives
 
@@ -45,7 +52,6 @@ The development process followed a four-stage pipeline:
 
 5.  **Model Deployment:**
     Deployment of the fine-tuned model as an interactive web application using **Hugging Face Spaces** and **Gradio**. This enables real-time inference on user-provided YouTube URLs without requiring local environment setup, demonstrating the model's portability and practical utility.
-    [https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone)
 
 ## Performance Evaluation
 ### Human Evaluation (TBA)
