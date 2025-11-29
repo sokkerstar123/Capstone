@@ -43,7 +43,7 @@ The development process followed a four-stage pipeline:
 4.  **Supervised Fine-Tuning:**
     Fine-tuning of the `google/flan-t5-base` model using the generated dataset. Training employed mixed-precision (FP16) and optimized hyperparameters to ensure convergence within limited GPU resources.
 
-5.  **Model Deployment (Stage 5):**
+5.  **Model Deployment:**
     Deployment of the fine-tuned model as an interactive web application using **Hugging Face Spaces** and **Gradio**. This enables real-time inference on user-provided YouTube URLs without requiring local environment setup, demonstrating the model's portability and practical utility.
     [https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone)
 
