@@ -43,6 +43,10 @@ The development process followed a four-stage pipeline:
 4.  **Supervised Fine-Tuning:**
     Fine-tuning of the `google/flan-t5-base` model using the generated dataset. Training employed mixed-precision (FP16) and optimized hyperparameters to ensure convergence within limited GPU resources.
 
+5.  **Model Deployment (Stage 5):**
+    Deployment of the fine-tuned model as an interactive web application using **Hugging Face Spaces** and **Gradio**. This enables real-time inference on user-provided YouTube URLs without requiring local environment setup, demonstrating the model's portability and practical utility.
+    [https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone)
+
 ## Performance Evaluation
 ### Human Evaluation (TBA)
 (Placeholder) To compare how well the four models could summarize, our team randomly sampled 30 YouTube videos to watch. The 30 videos are in the same domain, technical tutorials, and are from the same youtube-transcriptions dataset. Then for each of the thirty videos we wrote a summary of the video. From there we scored the four summaries for each video on informativeness, quality, and relevance. The scores were on a scale of 1 (poor) to 5 (excellent) and their definitions are below.
