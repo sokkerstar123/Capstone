@@ -59,7 +59,7 @@ The development process followed a four-stage pipeline:
 ## Performance Evaluation
 ### Human Evaluation
 
-Results from the human evaluation can be replicated by running the notebooks/human_evaluation.ipynb notebook.
+Results from the human evaluation can be replicated by running the notebooks/human_evaluation.ipynb notebook. The notebook utilizes the csv located at data/human_evaluation_sample - human_evaluation_sample.csv in the Github repository.
 
 ![Human Evaluation](images/human_evaluation.png)
 
