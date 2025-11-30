@@ -59,6 +59,7 @@ The development process followed a four-stage pipeline:
 ## Performance Evaluation
 ### Human Evaluation (TBA)
 
+Results from the human evaluation can be replicated by running the notebooks/humana_evaluation.ipynb notebook.
 
 ![Human Evaluation](images/human_evaluation.png)
 
@@ -67,6 +68,12 @@ The development process followed a four-stage pipeline:
 1. Informativeness: How much important information does the summary convey?
 2. Quality: Is the summary clear, well-written, and complete overall?
 3. Relevance: Does the summary capture the key points of the video?
+
+In the bar chart we bold the score of the model if it is not statistically significant from the best score at p=0.05, using a bootstrap-based paired mean difference test.
+
+The described method is similar to the process followed in the “Benchmarking Large Language Models for News Summarization” article (Zhang et al, 2024).
+
+We find that across all three metrics, humans perform the best, especially in terms of quality. Humans achieved a quality score of 4.3 while the bart-large-cnn model, RAG (with flan-t5-large), RAG (with Knowledge Distillation), and RAG (with bart-large-cnn) model achieved a quality score of 3, 2.7, 2.5, and 2.2 respectively. To add, the quality score of humans was not significantly different from the highest quality score (4.3 vs. 4.3), while the quality score of RAG (with bart-large-cnn), RAG (with flan-t5-large), RAG (with Knowledge Distillation), and bart-large-cnn (2.2 vs. 4.3 and 2.7 vs. 4.3 and 2.5 vs. 4.3 and 3 vs. 4.3) were significantly different. Additionally we saw that the bart-large-cnn model performed better than all the RAG models in terms of informativeness, quality, and relevance. In all, across the 5 models, our human evaluation shows humans to have the best summarization performance.
 
 ### Quantitative Evaluation (ROUGE Metrics) 
 We evaluated the model using both lexical and semantic metrics:
