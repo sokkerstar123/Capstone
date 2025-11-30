@@ -63,15 +63,16 @@ Results from the human evaluation can be replicated by running the notebooks/hum
 
 ![Human Evaluation](images/human_evaluation.png)
 
-Our group conducted a human evaluation of the four models below.
+Our group conducted a human evaluation of the six models below.
 
 1. Bart-large-cnn
 2. RAG (with bart-large-cnn)
 3. RAG (with flan-t5-large)
 4. RAG (with Knowledge Distillation)
-5. Human
-   
-To compare how well the four models could summarize, our team randomly sampled 30 YouTube videos to watch. The 30 videos are in the same domain, technical tutorials, and are from the same youtube-transcriptions dataset but not in the training data. Then for each of the 30 videos we wrote a summary of the video. From there we scored the four summaries for each video on informativeness, quality, and relevance. The scores were on a scale of 1 (poor) to 5 (excellent) and their definitions are below.
+5. Gpt-oss-20b (via OpenRouter api)
+6. Human
+
+To compare how well the six models could summarize, our team randomly sampled 30 YouTube videos to watch. The 30 videos are in the same domain, technical tutorials, and are from the same youtube-transcriptions dataset but not in the training data. Then for each of the 30 videos we wrote a summary of the video. From there we scored the six summaries for each video on informativeness, quality, and relevance. The scores were on a scale of 1 (poor) to 5 (excellent) and their definitions are below.
 
 1. Informativeness: How much important information does the summary convey?
 2. Quality: Is the summary clear, well-written, and complete overall?
@@ -79,7 +80,7 @@ To compare how well the four models could summarize, our team randomly sampled 3
 
 In the bar chart we bold the score of the model if it is not statistically significant from the best score at p=0.05, using a bootstrap-based paired mean difference test.
 
-We find that across all three metrics, humans perform the best, especially in terms of quality. Humans achieved a quality score of 4.3 while the bart-large-cnn model, RAG (with flan-t5-large), RAG (with Knowledge Distillation), and RAG (with bart-large-cnn) model achieved a quality score of 3, 2.7, 2.5, and 2.2 respectively. To add, the quality score of humans was not significantly different from the highest quality score (4.3 vs. 4.3), while the quality score of RAG (with bart-large-cnn), RAG (with flan-t5-large), RAG (with Knowledge Distillation), and bart-large-cnn (2.2 vs. 4.3 and 2.7 vs. 4.3 and 2.5 vs. 4.3 and 3 vs. 4.3) were significantly different. Additionally we saw that the bart-large-cnn model performed better than all the RAG models in terms of informativeness, quality, and relevance. In all, across the 5 models, our human evaluation shows humans to have the best summarization performance.
+We find that across all three metrics, humans perform the best, especially in terms of quality. Humans achieved a quality score of 4.3 while the gpt-oss-20b, bart-large-cnn model, RAG (with flan-t5-large), RAG (with Knowledge Distillation), and RAG (with bart-large-cnn) model achieved a quality score of 3.7, 3, 2.7, 2.5, and 2.2 respectively. To add, the quality score of humans was not significantly different from the highest quality score (4.3 vs. 4.3), while the quality score of RAG (with bart-large-cnn), RAG (with flan-t5-large), RAG (with Knowledge Distillation), bart-large-cnn, and gpt-oss-20b (2.2 vs. 4.3 and 2.7 vs. 4.3 and 2.5 vs. 4.3 and 3 vs. 4.3 and 3.7 vs. 4.3) were significantly different. Additionally we saw that the bart-large-cnn model performed better than all the RAG models in terms of informativeness, quality, and relevance. In all, across the six models, our human evaluation shows humans to have the best summarization performance.
 
 ### Quantitative Evaluation (ROUGE Metrics) 
 We evaluated the model using both lexical and semantic metrics:
