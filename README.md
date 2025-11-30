@@ -30,7 +30,7 @@ The project directory is organized as follows:
 
 * **src/**: Contains the production-ready source code for the inference engine and the `VideoSummarizer` class.
 * **notebooks/**: Includes Jupyter notebooks documenting the experimental process, including data ETL, RAG prototyping, evaluation and model training workflows.
-* **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included.
+* **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - human_evaluation_sample.csv is included, which is for the human evaluation part of the project.
 * **app/**: Lists all files for api calls and the application.
 * **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
