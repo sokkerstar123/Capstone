@@ -29,7 +29,12 @@ In addition to the app application, we deployed a dedicated web-based demonstrat
 The project directory is organized as follows:
 
 * **src/**: Contains the production-ready source code for the inference engine and the `VideoSummarizer` class.
-* **notebooks/**: Includes Jupyter notebooks documenting the experimental process, including data ETL, RAG prototyping, evaluation and model training workflows.
+* **notebooks/**: Documentation of the experimental process, analysis, and legacy comparisons.
+    * `final_analysis_and_plots.ipynb`: The primary notebook containing the reproducible pipeline for model training, inference, quantitative evaluation (ROUGE/Cosine Similarity), and generation of final report visualizations.
+    * `legacy_rag_experiment.ipynb`: Records the initial 'RAG Prototype' approach using Retrieval-Augmented Generation (RAG), preserved for architectural comparison.
+    * `human_evaluation.ipynb`: Contains the qualitative assessment protocols and results from human-in-the-loop testing.
+    * `appendix_model_benchmarking.ipynb`: A comparative analysis notebook benchmarking the local Flan-T5 model against cloud-based LLMs (via OpenRouter) to assess performance trade-offs.
+    * `fix_notebook.py`: Utility script for notebook maintenance and formatting.*
 * **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - human_evaluation_sample.csv is included, which is for the human evaluation part of the project.
 * **app/**: Lists all files for api calls and the application.
 * **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
@@ -43,10 +48,10 @@ The development process followed a four-stage pipeline:
 1.  **Data Acquisition & Preprocessing:**
     Utilization of the `jamescalam/youtube-transcriptions` dataset. The pipeline handles text cleaning, concatenation based on video IDs, and tokenization.
 
-2.  **RAG Prototype (Phase I):**
+2.  **RAG Prototype:**
     Initial implementation using FAISS vector stores and `sentence-transformers` to retrieve relevant transcript chunks. While effective for QA, this approach highlighted limitations in global narrative summarization, prompting a shift to fine-tuning.
 
-3.  **Knowledge Distillation (Phase II):**
+3.  **Knowledge Distillation:**
     Deployment of a robust data pipeline to interact with the Gemini API, generating approximately 300 high-quality summary-transcript pairs. This synthetic dataset served as the ground truth for student model training.
 
 4.  **Supervised Fine-Tuning:**
@@ -54,6 +59,9 @@ The development process followed a four-stage pipeline:
 
 5.  **Model Deployment:**
     Deployment of the fine-tuned model as an interactive web application using **Hugging Face Spaces** and **Gradio**. This supports real-time inference on user-provided video transcripts and a small set of pre-loaded YouTube demo videos that emulate the full URL-to-summary workflow. This design removes the need for any local setup, while demonstrating the model's portability, low inference cost, and practical utility on CPU-only infrastructure.
+
+6.  **Comparative Benchmarking:**
+    Implementation of a benchmarking framework to evaluate the fine-tuned local model against a state-of-the-art cloud-based Large Language Model (GPT-OSS-20B via OpenRouter). This stage quantifies the trade-offs between model size, inference cost, data privacy, and semantic accuracy, validating the efficiency of the Small Language Model (SLM) for specific summarization tasks.
 
     
 ## Performance Evaluation
