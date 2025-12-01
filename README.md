@@ -34,8 +34,8 @@ The project directory is organized as follows:
     * `human_evaluation.ipynb`: Contains the qualitative assessment protocols and results from human-in-the-loop testing.
     * `legacy_rag_experiment.ipynb`: Records the initial 'RAG Prototype' approach using Retrieval-Augmented Generation (RAG), preserved for architectural comparison.
     * `appendix_model_benchmarking.ipynb`: A comparative analysis notebook benchmarking the local Flan-T5 model against cloud-based LLMs (via OpenRouter) to assess performance trade-offs.
-    * `fix_notebook.py`: Utility script for notebook maintenance and formatting.*
-* **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - human_evaluation_sample.csv is included, which is for the human evaluation part of the project.
+    * `fix_notebook.py`: Utility script for notebook maintenance and formatting.
+* **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - `human_evaluation_sample.csv` is included, which is for the human evaluation part of the project.
 * **app/**: Lists all files for api calls and the application.
 * **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
@@ -58,10 +58,10 @@ The development process followed a four-stage pipeline:
     Fine-tuning of the `google/flan-t5-base` model using the generated dataset. Training employed mixed-precision (FP16) and optimized hyperparameters to ensure convergence within limited GPU resources.
 
 5.  **Model Deployment:**
-    Deployment of the fine-tuned model as an interactive web application using **Hugging Face Spaces** and **Gradio**. This supports real-time inference on user-provided video transcripts and a small set of pre-loaded YouTube demo videos that emulate the full URL-to-summary workflow. This design removes the need for any local setup, while demonstrating the model's portability, low inference cost, and practical utility on CPU-only infrastructure.
+    Deployment of the fine-tuned model as an interactive web application using Hugging Face Spaces and Gradio. This supports real-time inference on user-provided video transcripts and a small set of pre-loaded YouTube demo videos that emulate the full URL-to-summary workflow. This design removes the need for any local setup, while demonstrating the model's portability, low inference cost, and practical utility on CPU-only infrastructure.
 
 6.  **Comparative Benchmarking:**
-    Implementation of a benchmarking framework to evaluate the fine-tuned local model against a state-of-the-art cloud-based Large Language Model (GPT-OSS-20B via OpenRouter). This stage quantifies the trade-offs between model size, inference cost, data privacy, and semantic accuracy, validating the efficiency of the Small Language Model (SLM) for specific summarization tasks.
+    Implementation of a benchmarking framework to evaluate the fine-tuned local model against a state-of-the-art cloud-based Large Language Model (`GPT-OSS-20B` via OpenRouter). This stage quantifies the trade-offs between model size, inference cost, data privacy, and semantic accuracy, validating the efficiency of the Small Language Model (SLM) for specific summarization tasks.
 
     
 ## Performance Evaluation
