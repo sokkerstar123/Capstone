@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-In the era of digital content explosion, extracting key insights from unstructured video data remains a significant bottleneck. This repository hosts the implementation of a comprehensive AI system designed to democratize video intelligence. Our solution addresses the high cost and latency of proprietary LLMs by employing a **Knowledge Distillation** framework, where a high-capacity teacher model (Gemini 1.5) supervises the training of an efficient, locally deployment-ready student model (Flan-T5).
+In the era of digital content explosion, extracting key insights from unstructured video data remains a significant bottleneck. This repository hosts the implementation of a comprehensive AI system designed to democratize video intelligence. Our solution addresses the high cost and latency of proprietary LLMs by employing a **Knowledge Distillation** framework, where a high-capacity teacher model (Gemini 2.0) supervises the training of an efficient, locally deployment-ready student model (Flan-T5).
 
 The project encompasses a full-stack data science lifecycle, featuring:
 
