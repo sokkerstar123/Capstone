@@ -2,9 +2,15 @@
 
 ## Project Overview
 
-This repository hosts the implementation of a scalable AI system designed to generate abstractive summaries for YouTube video transcripts. Addressing the challenges of processing long-form unstructured audio-visual data, this project employs a **Knowledge Distillation** framework. We utilize a high-capacity Large Language Model (Gemini 2.0Flash) to generate a synthetic "Gold Standard" dataset, which is subsequently used to fine-tune a computationally efficient **Flan-T5** model.
+In the era of digital content explosion, extracting key insights from unstructured video data remains a significant bottleneck. This repository hosts the implementation of a comprehensive AI system designed to democratize video intelligence. Our solution addresses the high cost and latency of proprietary LLMs by employing a **Knowledge Distillation** framework, where a high-capacity teacher model (Gemini 1.5) supervises the training of an efficient, locally deployment-ready student model (Flan-T5).
 
-The system integrates principles from **Retrieval-Augmented Generation (RAG)** for context management and demonstrates a viable pipeline for democratizing video intelligence with low inference costs.
+The project encompasses a full-stack data science lifecycle, featuring:
+
+* **Core Model Engineering:** A fine-tuned Flan-T5 model that achieves "cloud-level" semantic understanding with zero marginal inference cost, validated through rigorous ROUGE and Cosine Similarity benchmarking.
+* **Human-Centric Evaluation:** Beyond automated metrics, we implemented a structured **Human Evaluation** protocol to assess the practical utility, coherence, and factual accuracy of the generated summaries, ensuring the output aligns with human cognitive needs.
+* **Real-World Deployment:** The system is operationalized through a dual-deployment strategy: a research-focused web demo on **Hugging Face Spaces** for model transparency, and a consumer-facing **Mobile Application** (developed by the team) that integrates cloud-based inference for scalable user interaction.
+
+This work demonstrates a viable path for building privacy-preserving, cost-effective NLP applications that do not compromise on narrative quality.
 
 ## Demonstration
 
