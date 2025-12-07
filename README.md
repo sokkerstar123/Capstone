@@ -52,7 +52,7 @@ The project directory is organized as follows:
 
 ## Methodology
 
-The development process followed a four-stage pipeline:
+The development process followed a 6-stage pipeline:
 
 1.  **Data Acquisition & Preprocessing:**
     Utilization of the `jamescalam/youtube-transcriptions` dataset. The pipeline handles text cleaning, concatenation based on video IDs, and tokenization.
