@@ -183,4 +183,4 @@ The fine-tuned model weights (`final_flan_t5_model`) are hosted externally due t
 This project is licensed under the **MIT License**.
 
 ---
-*This project was submitted in partial fulfillment of the requirements for the Master of Applied Data Science (MADS) program.*
+*This project was submitted in partial fulfillment of the requirements for the Master of Applied Data Science (MADS) program, University of Michigan.*
