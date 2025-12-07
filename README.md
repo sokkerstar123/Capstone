@@ -14,14 +14,14 @@ This work demonstrates a viable path for building privacy-preserving, cost-effec
 
 ## Demonstration
 
-### 1. APP (TBA)
-...
-...
-...
-
-### 2. Interactive Model Demo
+### 1. Research-focused web demo on Hugging Face Spaces
 
 In addition to the app application, we deployed a dedicated web-based demonstration on [Hugging Face Spaces](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone). This demo lets users interact directly with our fine-tuned Flan-T5 model by either selecting pre-configured YouTube demo videos (with stored transcripts) or pasting their own video transcripts. The deployment shows that high-quality, abstractive video summarization can be run efficiently on standard CPU-only hardware, without relying on paid external APIs at inference time.
+
+### 2. Consumer-facing Mobile Application (TBC - Damian)
+...
+...
+...
 
 
 ## Technical Objectives
