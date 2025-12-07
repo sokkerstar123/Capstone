@@ -21,7 +21,7 @@ In addition to the app application, we deployed a dedicated web-based demonstrat
 ### 2. Consumer-facing Mobile Application (TBC - Damian)
 ...
 
-(Please also take a look at the `app/` folder and the `app/` for the "Repository Structure" section below. Thanks!)
+(Please also take a look at the files in the `app/` folder and the `app/` for the "Repository Structure" section below. Thanks!)
 
 ...
 
