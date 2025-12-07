@@ -55,7 +55,7 @@ The project directory is organized as follows:
 The development process followed a 6-stage pipeline:
 
 1.  **Data Acquisition & Preprocessing:**
-    Utilization of the `jamescalam/youtube-transcriptions` dataset. The pipeline handles text cleaning, concatenation based on video IDs, and tokenization.
+    Utilization of the [`jamescalam/youtube-transcriptions`](https://huggingface.co/datasets/jamescalam/youtube-transcriptions) dataset. The pipeline handles text cleaning, concatenation based on video IDs, and tokenization.
 
 2.  **RAG Prototype:**
     Initial implementation using FAISS vector stores and `sentence-transformers` to retrieve relevant transcript chunks. While effective for QA, this approach highlighted limitations in global narrative summarization, prompting a shift to fine-tuning.
