@@ -20,7 +20,9 @@ In addition to the app application, we deployed a dedicated web-based demonstrat
 
 ### 2. Consumer-facing Mobile Application (TBC - Damian)
 ...
+
 (Please also take a look at the `app/` folder and the `app/` for the "Repository Structure" section below. Thanks!)
+
 ...
 
 ...
@@ -45,7 +47,6 @@ The project directory is organized as follows:
     * `fix_notebook.py`: Utility script for notebook maintenance and formatting.
 * **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - `human_evaluation_sample.csv` is included, which is for the human evaluation part of the project.
 * **app/**: Lists all files for api calls and the application.
-* **reports/**: Contains the final project report detailing the methodology, error analysis, and conclusions.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
 * **requirements.txt**: Lists all Python dependencies required to reproduce the environment.
 
