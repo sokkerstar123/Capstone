@@ -163,7 +163,7 @@ This project utilizes the **YouTube Transcriptions** dataset hosted on Hugging F
 
 ### 2. Derived Data (Synthetic Training Set)
 To facilitate knowledge distillation, we generated a synthetic dataset containing "Gold Standard" summaries.
-* **Method:** Generated using Google's Gemini 2.0 Pro API based on the source transcripts.
+* **Method:** Generated using Google's Gemini 2.0 Flash API based on the source transcripts.
 * **Availability:** The derived dataset (`gold_dataset_merged_final.csv`) is included in this repository for reproducibility: [https://github.com/sokkerstar123/Capstone/blob/main/data/gold_dataset_merged_final.csv](https://github.com/sokkerstar123/Capstone/blob/main/data/gold_dataset_merged_final.csv).
 * **Terms of Use:** This derived data is intended solely for academic research and verifying the results of this project.
 
