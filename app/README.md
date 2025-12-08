@@ -7,6 +7,12 @@
 
 YouTube Summarizer is an AI-powered web application that generates concise summaries of YouTube videos. Users paste a YouTube URL and receive a short, readable summary of the video’s content in seconds.
 
+## Live Demo
+
+You can access the deployed web application here:
+
+- https://team-candlestyt.lovable.app/
+
 ## Features
 
 - 🎥 **Instant Summaries** – Paste any YouTube URL to get an AI-generated summary  
