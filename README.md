@@ -19,14 +19,8 @@ This work demonstrates a viable path for building privacy-preserving, cost-effec
 In addition to the app application, we deployed a dedicated web-based demonstration on [Hugging Face Spaces](https://huggingface.co/spaces/ying2sun/youtube-video-summarizer-capstone). This demo lets users interact directly with our fine-tuned Flan-T5 model by either selecting pre-configured YouTube demo videos (with stored transcripts) or pasting their own video transcripts. The deployment shows that high-quality, abstractive video summarization can be run efficiently on standard CPU-only hardware, without relying on paid external APIs at inference time.
 
 ### 2. Consumer-facing Mobile Application (TBC - Damian)
-...
 
-(Please also take a look at the files in the `app/` folder and the `app/` for the "Repository Structure" section below. Thanks!)
-
-...
-
-...
-
+To demonstrate an alternative deployment pathway, we developed a full-stack web application leveraging cloud-based infrastructure. The app can be tested here: [https://team-candlestyt.lovable.app](https://team-candlestyt.lovable.app)
 
 ## Technical Objectives
 
