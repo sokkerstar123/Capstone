@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, HTTPException
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from VideoSummarizer import VideoSummarizer
+from MobileSummarizer import VideoSummarizer
 from dotenv import load_dotenv
 import os
 
