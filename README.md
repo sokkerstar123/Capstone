@@ -20,8 +20,11 @@ In addition to the app application, we deployed a dedicated web-based demonstrat
 
 ### 2. Consumer-facing Mobile Application
 
-To demonstrate an alternative deployment pathway, we developed a full-stack web application leveraging cloud-based infrastructure. The app can be tested here: [https://team-candlestyt.lovable.app](https://team-candlestyt.lovable.app)
-Note: The source code for this application is contained entirely within the app/ directory, functioning as a standalone monorepo within this project.
+To demonstrate an alternative deployment pathway, we developed a full-stack web application leveraging cloud-based infrastructure.
+
+* **Live Demo:** The app can be tested here: [https://team-candlestyt.lovable.app](https://team-candlestyt.lovable.app)
+
+*Note: The source code for this application is contained entirely within the `app/` directory, functioning as a standalone monorepo within this project.*
 
 ## Technical Objectives
 
