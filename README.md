@@ -46,7 +46,7 @@ The project directory is organized as follows:
     * `appendix_model_benchmarking.ipynb`: A comparative analysis notebook benchmarking the local Flan-T5 model against cloud-based LLMs (via OpenRouter) to assess performance trade-offs.
     * `fix_notebook.py`: Utility script for notebook maintenance and formatting.
 * **data/**: The derived dataset (`gold_dataset_merged_final.csv`) is included. Also, the human_evaluation_sample - `human_evaluation_sample.csv` is included, which is for the human evaluation part of the project.
-* **app/**: Lists all files for api calls and the application.
+* **app/**: Contains the complete source code for the consumer-facing mobile application (React/TypeScript). This directory operates as a standalone frontend project with its own dependencies and documentation.
 * **images/**: Stores data visualizations generated during the evaluation phase, such as performance metrics and embedding comparisons.
 * **requirements.txt**: Lists all Python dependencies required to reproduce the environment.
 
